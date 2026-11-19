@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: Header 343x44 — avatar 43 + lời chào 22 SemiBold, chuông 20 + chấm xanh 8 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="44dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/header_avatar"
+            android:layout_width="@dimen/wl_avatar"
+            android:layout_height="@dimen/wl_avatar"
+            android:background="@drawable/bg_avatar_placeholder"
+            android:contentDescription="@string/cd_avatar"
+            android:padding="11dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user"
+            android:tint="@color/wl_text_secondary"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Worklink.Circle"
+            app:strokeColor="@color/wl_border"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/header_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Worklink.Title"
+            app:lineHeight="22dp" />
+
+        <FrameLayout
+            android:id="@+id/header_bell"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/cd_notifications"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_bell"
+                android:tint="@color/wl_text_primary" />
+
+            <View
+                android:id="@+id/header_bell_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_dot_primary"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

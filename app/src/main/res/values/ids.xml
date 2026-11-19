@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tab Ứng viên -->
+    <item name="tab_candidate_explore" type="id" />
+    <item name="tab_candidate_saved" type="id" />
+    <item name="tab_candidate_applied" type="id" />
+    <item name="tab_candidate_notifications" type="id" />
+    <item name="tab_candidate_account" type="id" />
+
+    <!-- Tab Nhà tuyển dụng -->
+    <item name="tab_employer_home" type="id" />
+    <item name="tab_employer_posts" type="id" />
+    <item name="tab_employer_candidates" type="id" />
+    <item name="tab_employer_calendar" type="id" />
+    <item name="tab_employer_inbox" type="id" />
+
+    <!-- Tab Quản trị -->
+    <item name="tab_admin_overview" type="id" />
+    <item name="tab_admin_users" type="id" />
+    <item name="tab_admin_review" type="id" />
+    <item name="tab_admin_notifications" type="id" />
+    <item name="tab_admin_account" type="id" />
+</resources>

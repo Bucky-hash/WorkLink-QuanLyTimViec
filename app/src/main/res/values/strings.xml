@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">worklink_nhom5</string>
+    <string name="app_name">Worklink</string>
+
+    <!-- Điều hướng: Ứng viên -->
+    <string name="nav_candidate_explore">Khám phá</string>
+    <string name="nav_candidate_saved">Đã lưu</string>
+    <string name="nav_candidate_applied">Ứng tuyển</string>
+    <string name="nav_candidate_notifications">Thông báo</string>
+    <string name="nav_candidate_account">Tài khoản</string>
+
+    <!-- Điều hướng: Nhà tuyển dụng -->
+    <string name="nav_employer_home">Trang chủ</string>
+    <string name="nav_employer_posts">Bài đăng</string>
+    <string name="nav_employer_candidates">Ứng viên</string>
+    <string name="nav_employer_calendar">Lịch</string>
+    <string name="nav_employer_inbox">Hộp thư</string>
+
+    <!-- Điều hướng: Quản trị -->
+    <string name="nav_admin_overview">Tổng quan</string>
+    <string name="nav_admin_users">Người dùng</string>
+    <string name="nav_admin_review">Duyệt tin</string>
+    <string name="nav_admin_notifications">Thông báo</string>
+    <string name="nav_admin_account">Tài khoản</string>
+
+    <!-- Dùng chung -->
+    <string name="home_greeting">Xin chào,\n%1$s.</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="cd_open_chat">Mở tin nhắn</string>
+    <string name="cd_notifications">Thông báo</string>
+    <string name="cd_avatar">Ảnh đại diện</string>
+    <string name="placeholder_screen">Màn hình %1$s đang được xây dựng</string>
+
+    <!-- Màn chọn vai trò (tạm thời, xóa khi có luồng Giới thiệu/Đăng nhập) -->
+    <string name="dev_pick_role">Chọn vai trò để xem điều hướng</string>
+    <string name="dev_role_candidate">Ứng viên</string>
+    <string name="dev_role_employer">Nhà tuyển dụng</string>
+    <string name="dev_role_admin">Quản trị</string>
 </resources>

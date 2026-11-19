@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: "Bottom Nav" 343x72, nền trắng, bo 24, đổ bóng (blur 12, y 4, đen 8%) -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wl_nav_height"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/wl_radius_nav"
+        app:cardElevation="6dp"
+        app:contentPadding="0dp"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:id="@+id/nav_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </com.google.android.material.card.MaterialCardView>
+</merge>

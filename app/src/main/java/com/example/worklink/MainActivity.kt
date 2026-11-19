@@ -1,20 +1,26 @@
 package com.example.worklink
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.worklink.core.base.BaseActivity
+import com.example.worklink.ui.admin.AdminMainActivity
+import com.example.worklink.ui.candidate.CandidateMainActivity
+import com.example.worklink.ui.employer.EmployerMainActivity
 
-class MainActivity : AppCompatActivity() {
+/** TẠM THỜI: chọn vai trò để thử điều hướng. Thay bằng Giới thiệu / Đăng nhập khi các màn đó xong. */
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        findViewById<android.view.View>(R.id.btn_candidate).setOnClickListener {
+            startActivity(Intent(this, CandidateMainActivity::class.java))
+        }
+        findViewById<android.view.View>(R.id.btn_employer).setOnClickListener {
+            startActivity(Intent(this, EmployerMainActivity::class.java))
+        }
+        findViewById<android.view.View>(R.id.btn_admin).setOnClickListener {
+            startActivity(Intent(this, AdminMainActivity::class.java))
         }
     }
 }
