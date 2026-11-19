@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Chữ (Inter) ===================== -->
+    <style name="TextAppearance.Worklink" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/wl_text_primary</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Lời chào ở header: 22 SemiBold -->
+    <style name="TextAppearance.Worklink.Title" parent="TextAppearance.Worklink">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- Nội dung 16 -->
+    <style name="TextAppearance.Worklink.Body" parent="TextAppearance.Worklink">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Nội dung 17 (ô tìm kiếm, nút phụ) -->
+    <style name="TextAppearance.Worklink.BodyLarge" parent="TextAppearance.Worklink">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.024</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <!-- Nội dung 13 -->
+    <style name="TextAppearance.Worklink.BodySmall" parent="TextAppearance.Worklink">
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">20dp</item>
+    </style>
+
+    <!-- Chú thích 12, màu phụ -->
+    <style name="TextAppearance.Worklink.Caption" parent="TextAppearance.Worklink">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/wl_text_secondary</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+    <!-- Nhãn trường form: 14 SemiBold -->
+    <style name="TextAppearance.Worklink.Label" parent="TextAppearance.Worklink">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20dp</item>
+    </style>
+
+    <!-- Nút -->
+    <style name="TextAppearance.Worklink.Button" parent="TextAppearance.Worklink">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.Button.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.Button.SemiBold">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.Button.Small">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.Button.Regular">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.024</item>
+    </style>
+
+    <!-- Tab điều hướng dưới: 11 -->
+    <style name="TextAppearance.Worklink.TabLabel" parent="TextAppearance.Worklink">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.TabLabel.Active">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <!-- Số thông báo chưa đọc: 10 Bold -->
+    <style name="TextAppearance.Worklink.Badge" parent="TextAppearance.Worklink">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.Worklink.Chip" parent="TextAppearance.Worklink">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- ===================== Nút ===================== -->
+    <!-- Nút chính: nền xanh, bo 10, cao 48 -->
+    <style name="Widget.Worklink.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/wl_button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/wl_primary</item>
+        <item name="cornerRadius">@dimen/wl_radius_field</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconTint">@color/white</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <!-- Nút viền xanh (Lưu nháp, Thêm mục, Đổi mật khẩu, Xem trước) -->
+    <style name="Widget.Worklink.Button.Outlined">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/wl_primary</item>
+        <item name="iconTint">@color/wl_primary</item>
+        <item name="strokeColor">@color/wl_primary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Nút viền đỏ (Đăng xuất) -->
+    <style name="Widget.Worklink.Button.Danger" parent="Widget.Worklink.Button.Outlined">
+        <item name="android:textColor">@color/wl_error</item>
+        <item name="iconTint">@color/wl_error</item>
+        <item name="strokeColor">@color/wl_error</item>
+    </style>
+
+    <!-- Nút xám (Quay lại): nền #F1F3F4, bo 8, chữ 17 thường -->
+    <style name="Widget.Worklink.Button.Secondary">
+        <item name="android:minHeight">44dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Button.Regular</item>
+        <item name="android:textColor">@color/wl_text_primary</item>
+        <item name="backgroundTint">@color/wl_field_bg</item>
+        <item name="cornerRadius">@dimen/wl_radius_chip</item>
+    </style>
+
+    <!-- Nút xanh nhạt (Thêm học vấn / Thêm kinh nghiệm): cao 40, bo 8 -->
+    <style name="Widget.Worklink.Button.Tonal">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Button.Small</item>
+        <item name="android:textColor">@color/wl_primary</item>
+        <item name="iconTint">@color/wl_primary</item>
+        <item name="backgroundTint">@color/wl_primary_light</item>
+        <item name="cornerRadius">@dimen/wl_radius_chip</item>
+    </style>
+
+    <!-- Nút tròn "Tiếp tục": bo 100, cao 52, đổ bóng -->
+    <style name="Widget.Worklink.Button.Pill">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Button.SemiBold</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- ===================== Ô nhập liệu ===================== -->
+    <!-- Ô form (cao 48, bo 10, viền #D1D5DB, nền trắng). Nhãn đặt ở TextView riêng phía trên -->
+    <style name="Widget.Worklink.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/wl_input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/wl_radius_field</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/wl_radius_field</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/wl_radius_field</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/wl_radius_field</item>
+        <item name="startIconTint">@color/wl_text_secondary</item>
+        <item name="endIconTint">@color/wl_text_secondary</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.Worklink.Caption</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Worklink.Caption</item>
+        <item name="errorTextColor">@color/wl_error</item>
+    </style>
+
+    <!-- Ô đăng nhập / đăng ký: cao 56, bo 12, có icon 20 đầu dòng -->
+    <style name="Widget.Worklink.TextInputLayout.Auth">
+        <item name="boxCornerRadiusTopStart">@dimen/wl_radius_auth_field</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/wl_radius_auth_field</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/wl_radius_auth_field</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/wl_radius_auth_field</item>
+    </style>
+
+    <style name="Widget.Worklink.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:minHeight">@dimen/wl_field_height</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Body</item>
+        <item name="android:textColor">@color/wl_text_primary</item>
+        <item name="android:textColorHint">@color/wl_text_hint</item>
+    </style>
+
+    <style name="Widget.Worklink.EditText.Auth">
+        <item name="android:minHeight">@dimen/wl_auth_field_height</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18dp</item>
+    </style>
+
+    <!-- Ô tìm kiếm: nền #F1F3F4, bo 10, cao 36 -->
+    <style name="Widget.Worklink.SearchField" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/bg_search_field</item>
+        <item name="android:minHeight">@dimen/wl_search_height</item>
+        <item name="android:drawableStart">@drawable/ic_search</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.BodyLarge</item>
+        <item name="android:textColorHint">@color/wl_text_secondary</item>
+    </style>
+
+    <!-- ===================== Thẻ, chip, nút quay lại ===================== -->
+    <!-- Thẻ trắng viền #E5E7EB bo 12, đệm 16 (các khối form, card việc làm) -->
+    <style name="Widget.Worklink.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/wl_radius_card</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/wl_divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Chip lọc: nền xanh 30%, bo 8, cao 36 -->
+    <style name="Widget.Worklink.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="chipBackgroundColor">@color/wl_primary_chip</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">36dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Chip</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Worklink.Chip</item>
+    </style>
+    <style name="ShapeAppearance.Worklink.Chip" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/wl_radius_chip</item>
+    </style>
+    <style name="ShapeAppearance.Worklink.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Nút quay lại 36x36: nền trắng, viền #E5E7EB, bo 10, icon 20 -->
+    <style name="Widget.Worklink.BackButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">@dimen/wl_back_button</item>
+        <item name="android:layout_height">@dimen/wl_back_button</item>
+        <item name="android:background">@drawable/bg_back_button</item>
+        <item name="android:src">@drawable/ic_chevron_left</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:tint">@color/wl_text_primary</item>
+        <item name="android:contentDescription">@string/cd_back</item>
+    </style>
+</resources>

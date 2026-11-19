@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: "Mở tin nhắn" 52x52 #6CC51D, icon messages-square 24, badge 20x20 tại (35,-3) -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/fab_circle"
+        android:layout_width="@dimen/wl_fab_size"
+        android:layout_height="@dimen/wl_fab_size"
+        android:layout_gravity="bottom|start"
+        android:background="@drawable/bg_chat_fab"
+        android:clickable="true"
+        android:contentDescription="@string/cd_open_chat"
+        android:elevation="6dp"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_messages_square"
+            android:tint="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/fab_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="35dp"
+        android:background="@drawable/bg_chat_badge"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="20dp"
+        android:paddingHorizontal="5dp"
+        android:textAppearance="@style/TextAppearance.Worklink.Badge"
+        android:visibility="gone" />
+</merge>

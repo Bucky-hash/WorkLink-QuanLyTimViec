@@ -1,8 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Worklink_nhom5" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Thiết kế Figma chỉ có giao diện sáng nên dùng Light, không dùng DayNight -->
+    <style name="Base.Theme.Worklink_nhom5" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Màu thương hiệu -->
+        <item name="colorPrimary">@color/wl_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/wl_primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/wl_primary_dark</item>
+        <item name="colorSecondary">@color/wl_primary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/wl_primary_light</item>
+        <item name="colorOnSecondaryContainer">@color/wl_primary_dark</item>
+
+        <!-- Nền, bề mặt, chữ -->
+        <item name="android:colorBackground">@color/wl_bg_screen</item>
+        <item name="colorSurface">@color/wl_surface</item>
+        <item name="colorOnSurface">@color/wl_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/wl_text_secondary</item>
+        <item name="colorOutline">@color/wl_border</item>
+        <item name="colorOutlineVariant">@color/wl_divider</item>
+        <item name="colorError">@color/wl_error</item>
+        <item name="android:textColorPrimary">@color/wl_text_primary</item>
+        <item name="android:textColorSecondary">@color/wl_text_secondary</item>
+        <item name="android:textColorHint">@color/wl_text_hint</item>
+
+        <!-- Font Inter -->
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.Body</item>
+
+        <!-- Thanh trạng thái: nền sáng, icon tối (Figma status bar nền #F8F9FA) -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Style mặc định cho component -->
+        <item name="materialButtonStyle">@style/Widget.Worklink.Button</item>
+        <item name="textInputStyle">@style/Widget.Worklink.TextInputLayout</item>
+        <item name="editTextStyle">@style/Widget.Worklink.EditText</item>
+        <item name="materialCardViewStyle">@style/Widget.Worklink.Card</item>
+        <item name="chipStyle">@style/Widget.Worklink.Chip</item>
     </style>
 
     <style name="Theme.Worklink_nhom5" parent="Base.Theme.Worklink_nhom5" />

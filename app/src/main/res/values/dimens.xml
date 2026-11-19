@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wl_screen_padding">16dp</dimen>
+
+    <dimen name="wl_radius_chip">8dp</dimen>
+    <dimen name="wl_radius_field">10dp</dimen>
+    <dimen name="wl_radius_auth_field">12dp</dimen>
+    <dimen name="wl_radius_card">12dp</dimen>
+    <dimen name="wl_radius_nav">24dp</dimen>
+
+    <dimen name="wl_button_height">48dp</dimen>
+    <dimen name="wl_field_height">48dp</dimen>
+    <dimen name="wl_auth_field_height">56dp</dimen>
+    <dimen name="wl_search_height">36dp</dimen>
+
+    <dimen name="wl_nav_height">72dp</dimen>
+    <dimen name="wl_nav_outer_padding_h">16dp</dimen>
+    <dimen name="wl_nav_outer_padding_v">8dp</dimen>
+    <dimen name="wl_nav_icon">24dp</dimen>
+
+    <dimen name="wl_fab_size">52dp</dimen>
+    <dimen name="wl_back_button">36dp</dimen>
+    <dimen name="wl_avatar">43dp</dimen>
+</resources>
