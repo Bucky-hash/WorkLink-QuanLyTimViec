@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wl_bg_screen"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tv_admin_jobs_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_jobs_title"
+        android:textColor="@color/wl_text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Tìm kiếm -->
+    <EditText
+        android:id="@+id/edt_admin_jobs_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/wl_surface"
+        android:hint="@string/admin_jobs_search_hint"
+        android:paddingHorizontal="12dp"
+        android:singleLine="true"
+        android:textColor="@color/wl_text_primary"
+        android:textColorHint="@color/wl_text_hint"
+        android:textSize="14sp" />
+
+    <!-- Bộ lọc -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_admin_job_filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/wl_primary"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/admin_jobs_filter_all"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_admin_job_filter_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/wl_surface"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/admin_jobs_filter_pending"
+                android:textColor="@color/wl_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_admin_job_filter_approved"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/wl_surface"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/admin_jobs_filter_approved"
+                android:textColor="@color/wl_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_admin_job_filter_rejected"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/wl_surface"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/admin_jobs_filter_rejected"
+                android:textColor="@color/wl_text_secondary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Danh sách tin tuyển dụng -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_admin_jobs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/item_admin_job" />
+
+</LinearLayout>

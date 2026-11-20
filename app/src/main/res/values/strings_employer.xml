@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Applicant Management -->
+    <string name="employer_applicants_title">Quản lý ứng viên</string>
+    <string name="employer_applicants_search_hint">Tìm kiếm ứng viên...</string>
+    <string name="employer_applicants_all">Tất cả</string>
+    <string name="employer_applicants_new">Mới ứng tuyển</string>
+    <string name="employer_applicants_reviewed">Đã xem</string>
+    <string name="employer_applicants_approved">Đã duyệt</string>
+    <string name="employer_applicants_rejected">Đã từ chối</string>
+    <string name="employer_applicants_empty">Không tìm thấy ứng viên</string>
+
+    <!-- Applicant Information -->
+    <string name="employer_applicant_experience">Kinh nghiệm</string>
+    <string name="employer_applicant_position">Vị trí ứng tuyển</string>
+    <string name="employer_applicant_date">Ngày ứng tuyển</string>
+    <string name="employer_applicant_detail">Xem chi tiết</string>
+    <string name="employer_applicant_cv">Xem CV</string>
+
+    <!-- Common -->
+    <string name="employer_search">Tìm kiếm</string>
+    <string name="employer_cancel">Hủy</string>
+    <string name="employer_save">Lưu</string>
+    <string name="employer_back">Quay lại</string>
+    <string name="employer_confirm">Xác nhận</string>
+</resources>
