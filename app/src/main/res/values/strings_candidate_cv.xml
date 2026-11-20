@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Đầu trang -->
+    <string name="cv_brand">worklink</string>
+    <string name="cv_save_draft_top">Lưu nháp</string>
+    <string name="cv_title">Tạo CV của bạn</string>
+    <string name="cv_subtitle">Hoàn thiện hồ sơ để kết nối với công việc phù hợp.</string>
+    <string name="cv_required_note">* Thông tin bắt buộc</string>
+
+    <!-- Tiêu đề các thẻ -->
+    <string name="cv_section_personal">Thông tin cá nhân</string>
+    <string name="cv_section_contact">Thông tin liên hệ</string>
+    <string name="cv_section_position">Vị trí &amp; mục tiêu</string>
+    <string name="cv_section_education">Học vấn</string>
+    <string name="cv_section_experience">Kinh nghiệm làm việc</string>
+    <string name="cv_section_skills">Kỹ năng</string>
+
+    <!-- Ảnh đại diện -->
+    <string name="cv_change_photo">Thêm / thay ảnh</string>
+    <string name="cv_photo_format">JPG, PNG • Tối đa 5 MB</string>
+    <string name="cd_cv_avatar">Ảnh hồ sơ</string>
+
+    <!-- Nhãn ô nhập (dấu * đúng như Figma) -->
+    <string name="cv_label_cv_name">Tên CV *</string>
+    <string name="cv_label_full_name">Họ và tên *</string>
+    <string name="cv_label_birth">Ngày sinh</string>
+    <string name="cv_label_gender">Giới tính</string>
+    <string name="cv_label_email">Email *</string>
+    <string name="cv_label_phone">Số điện thoại *</string>
+    <string name="cv_label_address">Địa chỉ</string>
+    <string name="cv_label_website">Website / Portfolio</string>
+    <string name="cv_label_target_position">Vị trí ứng tuyển *</string>
+    <string name="cv_label_objective">Mục tiêu nghề nghiệp</string>
+    <string name="cv_objective_helper">Giới thiệu ngắn gọn định hướng của bạn.</string>
+    <string name="cv_label_school">Trường / Cơ sở đào tạo *</string>
+    <string name="cv_label_major">Chuyên ngành *</string>
+    <string name="cv_label_degree">Bằng cấp</string>
+    <string name="cv_label_start">Bắt đầu</string>
+    <string name="cv_label_end">Kết thúc</string>
+    <string name="cv_label_achievement">Thành tích / Mô tả</string>
+    <string name="cv_label_company">Công ty *</string>
+    <string name="cv_label_job_title">Vị trí công việc *</string>
+    <string name="cv_current_job">Tôi đang làm việc tại đây</string>
+    <string name="cv_label_job_desc">Mô tả công việc &amp; thành tích</string>
+    <string name="cv_label_add_skill">Thêm kỹ năng</string>
+    <string name="cv_hint_skill">Nhập kỹ năng của bạn</string>
+    <string name="cv_current">Hiện tại</string>
+
+    <!-- Nút trong thẻ và cuối trang -->
+    <string name="cv_add_education">Thêm học vấn</string>
+    <string name="cv_add_experience">Thêm kinh nghiệm</string>
+    <string name="cv_add_section">Thêm mục</string>
+    <string name="cv_add_section_hint">Chứng chỉ, dự án, ngoại ngữ hoặc hoạt động</string>
+    <string name="cv_action_draft">Lưu nháp</string>
+    <string name="cv_action_preview">Xem trước</string>
+    <string name="cv_action_save">Lưu CV</string>
+    <string name="cv_privacy_note">CV được lưu trong tài khoản của bạn.</string>
+
+    <!-- Hộp chọn (Figma chưa có phần này) -->
+    <string name="cv_pick_birth">Chọn ngày sinh</string>
+    <string name="cv_pick_month">Chọn thời gian</string>
+    <string-array name="cv_gender_options">
+        <item>Nam</item>
+        <item>Nữ</item>
+        <item>Khác</item>
+    </string-array>
+    <string-array name="cv_degree_options">
+        <item>Trung cấp</item>
+        <item>Cao đẳng</item>
+        <item>Cử nhân</item>
+        <item>Kỹ sư</item>
+        <item>Thạc sĩ</item>
+        <item>Tiến sĩ</item>
+        <item>Khác</item>
+    </string-array>
+
+    <!-- Thông báo -->
+    <string name="cv_error_required">Vui lòng nhập thông tin này</string>
+    <string name="cv_error_phone_invalid">Số điện thoại không hợp lệ</string>
+    <string name="cv_error_photo_type">Chỉ hỗ trợ ảnh JPG hoặc PNG</string>
+    <string name="cv_error_photo_size">Ảnh tối đa 5 MB</string>
+    <string name="cv_saved_draft">Đã lưu nháp</string>
+    <string name="cv_saved">Đã lưu CV</string>
+    <string name="cd_remove_skill">Xóa kỹ năng %1$s</string>
+</resources>

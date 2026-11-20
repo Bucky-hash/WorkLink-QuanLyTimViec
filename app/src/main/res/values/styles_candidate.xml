@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Style riêng cho màn Đăng nhập / Đăng ký (Ứng viên). Không sửa styles.xml dùng chung. -->
+<resources>
+
+    <!-- "worklink": Inter Bold 24 -->
+    <style name="TextAppearance.Worklink.AuthBrand">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- Dòng phụ dưới logo: Inter Regular 14, #6B7280 -->
+    <style name="TextAppearance.Worklink.AuthSubtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/wl_text_secondary</item>
+    </style>
+
+    <!-- Tab Đăng ký / Đăng nhập: SemiBold 16 xám; tab đang chọn Bold 16 xanh -->
+    <style name="TextAppearance.Worklink.AuthTab">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/wl_text_secondary</item>
+    </style>
+    <style name="TextAppearance.Worklink.AuthTab.Active">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+
+    <!-- Link nhỏ "Quên mật khẩu?", "Nhà tuyển dụng", "Admin": SemiBold 14 xanh -->
+    <style name="TextAppearance.Worklink.AuthLink">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+
+    <!-- Chữ thường 14 (Ghi nhớ, Chưa có tài khoản?) -->
+    <style name="TextAppearance.Worklink.AuthBody">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.Worklink.AuthBody.Secondary">
+        <item name="android:textColor">@color/wl_text_secondary</item>
+    </style>
+    <style name="TextAppearance.Worklink.AuthBody.Link">
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+
+    <!-- Dòng điều khoản ở màn Đăng ký: 14, cao dòng 20, giãn chữ -0.408px (Figma) -->
+    <style name="TextAppearance.Worklink.AuthBody.Terms">
+        <item name="android:letterSpacing">-0.029</item>
+        <item name="lineHeight">20dp</item>
+    </style>
+    <style name="TextAppearance.Worklink.AuthBody.Terms.Link">
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+
+    <!-- "Đăng nhập" xanh 17 ở chân màn Đăng ký (dựa trên BodyLarge của phần chung) -->
+    <style name="TextAppearance.Worklink.BodyLarge.Link">
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+</resources>

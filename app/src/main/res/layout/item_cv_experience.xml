@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Một khối kinh nghiệm làm việc: các trường cách nhau 16 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_cv_16"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <com.example.worklink.ui.candidate.cv.CvField
+        android:id="@+id/exp_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvLabel="@string/cv_label_company" />
+
+    <com.example.worklink.ui.candidate.cv.CvField
+        android:id="@+id/exp_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvLabel="@string/cv_label_job_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.worklink.ui.candidate.cv.CvField
+            android:id="@+id/exp_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cvEndIcon="@drawable/ic_cv_field_calendar_days"
+            app:cvKind="picker"
+            app:cvLabel="@string/cv_label_start" />
+
+        <com.example.worklink.ui.candidate.cv.CvField
+            android:id="@+id/exp_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            app:cvEndIcon="@drawable/ic_cv_field_calendar_days"
+            app:cvKind="picker"
+            app:cvLabel="@string/cv_label_end" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/exp_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:button="@drawable/selector_auth_checkbox"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="8dp"
+        android:text="@string/cv_current_job"
+        android:textAppearance="@style/TextAppearance.Worklink.CvOption"
+        app:buttonTint="@null" />
+
+    <com.example.worklink.ui.candidate.cv.CvField
+        android:id="@+id/exp_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cvKind="multiline"
+        app:cvLabel="@string/cv_label_job_desc"
+        app:cvMinLines="4" />
+</LinearLayout>
