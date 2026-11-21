@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/bg_candidate_card"
+    android:orientation="vertical"
+    android:padding="14dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_candidate_rec_company_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_candidate_chip_normal"
+            android:contentDescription="@string/candidate_cd_company_logo"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            tools:src="@android:drawable/sym_def_app_icon" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_candidate_rec_bookmark"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/candidate_cd_bookmark"
+            android:src="@android:drawable/btn_star_big_off" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_candidate_rec_job_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/candidate_text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="Nhà thiết kế UX" />
+
+    <TextView
+        android:id="@+id/tv_candidate_rec_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/candidate_text_secondary"
+        android:textSize="13sp"
+        tools:text="FPT Software" />
+
+    <TextView
+        android:id="@+id/tv_candidate_rec_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/candidate_text_secondary"
+        android:textSize="12sp"
+        tools:text="Hà Nội (Làm việc từ xa)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_candidate_rec_posted_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/candidate_text_hint"
+            android:textSize="11sp"
+            tools:text="1 ngày trước" />
+
+        <TextView
+            android:id="@+id/tv_candidate_rec_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/candidate_text_secondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            tools:text="LinkedIn" />
+    </LinearLayout>
+</LinearLayout>
