@@ -127,4 +127,33 @@
     <string name="candidate_profile_password_empty_toast">Vui lòng nhập đầy đủ mật khẩu</string>
     <string name="candidate_profile_logout_toast">Đã đăng xuất khỏi tài khoản</string>
     <string name="candidate_profile_create_cv_toast">Mở trình tạo CV mới</string>
+
+    <!-- Màn hình Thông báo ứng viên -->
+    <string name="candidate_notif_title">Thông báo</string>
+    <string name="candidate_notif_unread_summary">%1$d thông báo chưa đọc</string>
+    <string name="candidate_notif_mark_all_read">Đánh dấu tất cả đã đọc</string>
+    <string name="candidate_notif_tab_all">Tất cả</string>
+    <string name="candidate_notif_tab_unread">Chưa đọc (%1$d)</string>
+    <string name="candidate_notif_group_today">Hôm nay</string>
+    <string name="candidate_notif_group_yesterday">Hôm qua</string>
+    <string name="candidate_notif_status_unread">Chưa đọc</string>
+    <string name="candidate_notif_status_read">Đã đọc</string>
+    <string name="candidate_notif_empty">Không có thông báo nào</string>
+    <string name="candidate_notif_marked_all_toast">Đã đánh dấu tất cả thông báo là đã đọc</string>
+
+    <string name="candidate_notif_item1_title">Lời mời phỏng vấn</string>
+    <string name="candidate_notif_item1_body">VNG mời bạn phỏng vấn lập trình lúc 09:00, ngày 25/10.</string>
+    <string name="candidate_notif_item1_time">10 phút trước</string>
+
+    <string name="candidate_notif_item2_title">Hồ sơ đã được xem</string>
+    <string name="candidate_notif_item2_body">FPT Software đã xem hồ sơ ứng tuyển Nhà thiết kế UX của bạn.</string>
+    <string name="candidate_notif_item2_time">1 giờ trước</string>
+
+    <string name="candidate_notif_item3_title">Việc làm mới phù hợp</string>
+    <string name="candidate_notif_item3_body">Kế toán tổng hợp tại Viettel phù hợp với tùy chọn của bạn.</string>
+    <string name="candidate_notif_item3_time">2 giờ trước</string>
+
+    <string name="candidate_notif_item4_title">Đã nhận đơn ứng tuyển</string>
+    <string name="candidate_notif_item4_body">VNG đã nhận hồ sơ vị trí Chuyên viên Marketing.</string>
+    <string name="candidate_notif_item4_time">Hôm qua, 15:30</string>
 </resources>
