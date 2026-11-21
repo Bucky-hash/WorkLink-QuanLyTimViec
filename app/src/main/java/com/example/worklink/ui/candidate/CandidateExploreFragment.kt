@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.ImageButton
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worklink.R
 import com.example.worklink.data.mock.CandidateJobItem
@@ -19,15 +21,12 @@ import com.example.worklink.data.mock.CandidateJobMockData
 
 class CandidateExploreFragment : Fragment() {
 
-    private lateinit var recommendedAdapter: CandidateJobAdapter
-    private lateinit var latestAdapter: CandidateJobAdapter
+    private lateinit var rvRecommended: RecyclerView
+    private lateinit var rvLatest: RecyclerView
 
-    private val allRecommendedJobs = CandidateJobMockData.getRecommendedJobs()
-    private val allLatestJobs = CandidateJobMockData.getLatestJobs()
-
-    private var isProgrammingSelected = true
-    private var isLocationSelected = true
-    private var isRemoteSelected = true
+    private var selectedCategory: String = "Lập trình"
+    private var onlyRemote: Boolean = false
+    private var currentKeyword: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,113 +39,141 @@ class CandidateExploreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Ẩn thanh BottomNav bên trong layout vì CandidateMainActivity đã có sẵn thanh điều hướng rồi
-        view.findViewById<View>(R.id.bnv_candidate_main)?.visibility = View.GONE
+        // Tự động ẩn thanh điều hướng dưới của layout Activity để tránh trùng với BaseHostActivity
+        (view as? ViewGroup)?.let { rootGroup ->
+            if (rootGroup.childCount > 1) {
+                val lastChild = rootGroup.getChildAt(rootGroup.childCount - 1)
+                if (lastChild is ViewGroup &&
+                    lastChild !is NestedScrollView &&
+                    lastChild !is ScrollView
+                ) {
+                    lastChild.visibility = View.GONE
+                }
+            }
+        }
 
-        setupRecyclerViews(view)
+        rvRecommended = view.findViewById(R.id.rv_candidate_recommended_jobs)
+        rvLatest = view.findViewById(R.id.rv_candidate_latest_jobs)
+
+        rvRecommended.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        rvLatest.layoutManager = LinearLayoutManager(requireContext())
+
         setupSearchAndFilters(view)
-    }
-
-    private fun setupRecyclerViews(root: View) {
-        val rvRecommended = root.findViewById<RecyclerView>(R.id.rv_candidate_recommended_jobs)
-        val rvLatest = root.findViewById<RecyclerView>(R.id.rv_candidate_latest_jobs)
-
-        recommendedAdapter = CandidateJobAdapter(
-            jobs = allRecommendedJobs,
-            isHorizontalCard = true,
-            onJobClick = { job -> showToast("Mở chi tiết: ${job.title} - ${job.company}") },
-            onBookmarkClick = { job -> handleBookmarkToast(job) }
-        )
-
-        latestAdapter = CandidateJobAdapter(
-            jobs = allLatestJobs,
-            isHorizontalCard = false,
-            onJobClick = { job -> showToast("Mở chi tiết: ${job.title} - ${job.company}") },
-            onBookmarkClick = { job -> handleBookmarkToast(job) }
-        )
-
-        rvRecommended.adapter = recommendedAdapter
-        rvLatest.adapter = latestAdapter
+        applyFilter()
     }
 
     private fun setupSearchAndFilters(root: View) {
         val etSearch = root.findViewById<EditText>(R.id.et_candidate_search)
-        val btnFilter = root.findViewById<ImageButton>(R.id.btn_candidate_filter_settings)
         val chipProgramming = root.findViewById<TextView>(R.id.chip_candidate_programming)
         val chipLocation = root.findViewById<TextView>(R.id.chip_candidate_location)
         val chipRemote = root.findViewById<TextView>(R.id.chip_candidate_remote)
 
         etSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                filterJobs(s?.toString().orEmpty())
+                currentKeyword = s?.toString()?.trim().orEmpty()
+                applyFilter()
             }
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) = Unit
         })
 
         chipProgramming.setOnClickListener {
-            isProgrammingSelected = !isProgrammingSelected
-            updateChipStyle(chipProgramming, isProgrammingSelected)
-            filterJobs(etSearch.text.toString())
+            selectedCategory = if (selectedCategory == "Lập trình") "" else "Lập trình"
+            updateChipStyles(chipProgramming, chipLocation, chipRemote)
+            applyFilter()
         }
 
         chipLocation.setOnClickListener {
-            isLocationSelected = !isLocationSelected
-            updateChipStyle(chipLocation, isLocationSelected)
-            filterJobs(etSearch.text.toString())
+            selectedCategory = if (selectedCategory == "Đà Nẵng") "" else "Đà Nẵng"
+            updateChipStyles(chipProgramming, chipLocation, chipRemote)
+            applyFilter()
         }
 
         chipRemote.setOnClickListener {
-            isRemoteSelected = !isRemoteSelected
-            updateChipStyle(chipRemote, isRemoteSelected)
-            filterJobs(etSearch.text.toString())
+            onlyRemote = !onlyRemote
+            updateChipStyles(chipProgramming, chipLocation, chipRemote)
+            applyFilter()
         }
 
-        btnFilter.setOnClickListener {
-            showToast("Mở bộ lọc tiêu chí việc làm")
-        }
-
-        root.findViewById<TextView>(R.id.tv_candidate_recommended_see_all).setOnClickListener {
-            showToast("Xem tất cả việc làm đề xuất")
-        }
-
-        root.findViewById<TextView>(R.id.tv_candidate_latest_see_all).setOnClickListener {
-            showToast("Xem tất cả việc làm cập nhật mới")
-        }
+        updateChipStyles(chipProgramming, chipLocation, chipRemote)
     }
 
-    private fun filterJobs(keyword: String) {
-        val query = keyword.trim().lowercase()
-        val matchFilter: (CandidateJobItem) -> Boolean = { job ->
-            val matchText = query.isEmpty() ||
-                    job.title.lowercase().contains(query) ||
-                    job.company.lowercase().contains(query) ||
-                    job.location.lowercase().contains(query)
-            val matchRemote = !isRemoteSelected || job.isRemote
-            matchText && matchRemote
-        }
-
-        recommendedAdapter.updateData(allRecommendedJobs.filter(matchFilter))
-        latestAdapter.updateData(allLatestJobs.filter(matchFilter))
+    private fun updateChipStyles(
+        chipProgramming: TextView,
+        chipLocation: TextView,
+        chipRemote: TextView
+    ) {
+        applyChipState(chipProgramming, selectedCategory == "Lập trình")
+        applyChipState(chipLocation, selectedCategory == "Đà Nẵng")
+        applyChipState(chipRemote, onlyRemote)
     }
 
-    private fun updateChipStyle(chip: TextView, isSelected: Boolean) {
-        val ctx = requireContext()
-        if (isSelected) {
-            chip.setBackgroundResource(R.drawable.bg_candidate_chip_selected)
-            chip.setTextColor(ContextCompat.getColor(ctx, R.color.candidate_bg_white))
+    private fun applyChipState(chip: TextView, isSelected: Boolean) {
+        val bgRes = if (isSelected) {
+            R.drawable.bg_candidate_chip_selected
         } else {
-            chip.setBackgroundResource(R.drawable.bg_candidate_chip_normal)
-            chip.setTextColor(ContextCompat.getColor(ctx, R.color.candidate_text_secondary))
+            R.drawable.bg_candidate_chip_normal
         }
+        val textColorRes = if (isSelected) {
+            R.color.candidate_bg_white
+        } else {
+            R.color.candidate_text_primary
+        }
+        chip.setBackgroundResource(bgRes)
+        chip.setTextColor(ContextCompat.getColor(requireContext(), textColorRes))
     }
 
-    private fun handleBookmarkToast(job: CandidateJobItem) {
-        val msg = if (job.isSaved) "Đã lưu: ${job.title}" else "Đã bỏ lưu: ${job.title}"
-        showToast(msg)
+    private fun applyFilter() {
+        val recommended = CandidateJobMockData.getRecommendedJobs().filter { matchesFilter(it) }
+        val latest = CandidateJobMockData.getLatestJobs().filter { matchesFilter(it) }
+
+        rvRecommended.adapter = CandidateJobAdapter(
+            jobs = recommended,
+            isHorizontalCard = true,
+            onJobClick = { job -> openJobDetail(job) },
+            onBookmarkClick = { job -> toggleSaveJob(job) }
+        )
+
+        rvLatest.adapter = CandidateJobAdapter(
+            jobs = latest,
+            isHorizontalCard = false,
+            onJobClick = { job -> openJobDetail(job) },
+            onBookmarkClick = { job -> toggleSaveJob(job) }
+        )
     }
 
-    private fun showToast(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    private fun matchesFilter(job: CandidateJobItem): Boolean {
+        val matchKeyword = currentKeyword.isEmpty() ||
+                job.title.contains(currentKeyword, ignoreCase = true) ||
+                job.company.contains(currentKeyword, ignoreCase = true) ||
+                job.location.contains(currentKeyword, ignoreCase = true)
+
+        val matchCategory = when (selectedCategory) {
+            "" -> true
+            "Đà Nẵng" -> job.location.contains("Đà Nẵng", ignoreCase = true)
+            else -> job.category.equals(selectedCategory, ignoreCase = true)
+        }
+
+        val matchRemote = !onlyRemote || job.isRemote
+        return matchKeyword && matchCategory && matchRemote
+    }
+
+    private fun toggleSaveJob(job: CandidateJobItem) {
+        job.isSaved = !job.isSaved
+        val msg = if (job.isSaved) {
+            getString(R.string.candidate_detail_saved_success)
+        } else {
+            getString(R.string.candidate_detail_unsaved_success)
+        }
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun openJobDetail(job: CandidateJobItem) {
+        val containerId = (view?.parent as? ViewGroup)?.id ?: android.R.id.content
+        parentFragmentManager.beginTransaction()
+            .replace(containerId, CandidateJobDetailFragment.newInstance(job))
+            .addToBackStack(null)
+            .commit()
     }
 }

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/candidate_bg_white">
+
+    <!-- Thanh điều hướng trên: nút quay lại (<) -->
+    <LinearLayout
+        android:id="@+id/ll_candidate_detail_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@color/candidate_bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_candidate_detail_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/candidate_detail_back"
+            android:src="@android:drawable/ic_media_previous"
+            app:tint="@color/candidate_text_primary" />
+    </LinearLayout>
+
+    <!-- Nội dung cuộn chi tiết việc làm -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_candidate_detail_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_candidate_detail_bottom_action"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_candidate_detail_top_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Ảnh banner không gian làm việc + nút chat nổi màu xanh lá -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/iv_candidate_detail_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_candidate_detail_banner"
+                    android:contentDescription="@string/candidate_detail_banner_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_gallery" />
+
+                <ImageButton
+                    android:id="@+id/btn_candidate_detail_chat"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_candidate_floating_chat"
+                    android:contentDescription="@string/candidate_detail_chat_desc"
+                    android:elevation="4dp"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/sym_action_chat"
+                    app:tint="@color/candidate_bg_white" />
+            </FrameLayout>
+
+            <!-- Tiêu đề vị trí công việc -->
+            <TextView
+                android:id="@+id/tv_candidate_detail_job_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/candidate_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Nhà thiết kế UX" />
+
+            <!-- Logo công ty + Tên công ty + Nút lưu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_candidate_detail_company_logo"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_candidate_chip_normal"
+                    android:contentDescription="@string/candidate_cd_company_logo"
+                    android:padding="6dp"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/sym_def_app_icon" />
+
+                <TextView
+                    android:id="@+id/tv_candidate_detail_company_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/candidate_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="FPT Software" />
+
+                <ImageButton
+                    android:id="@+id/btn_candidate_detail_bookmark"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/candidate_cd_bookmark"
+                    android:src="@android:drawable/btn_star_big_off" />
+            </LinearLayout>
+
+            <!-- Địa điểm & hình thức làm việc -->
+            <TextView
+                android:id="@+id/tv_candidate_detail_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/candidate_text_secondary"
+                android:textSize="14sp"
+                tools:text="Hà Nội (Làm việc từ xa)" />
+
+            <!-- Thời gian đăng + Nguồn tuyển dụng (LinkedIn...) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_candidate_detail_posted_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/candidate_text_hint"
+                    android:textSize="12sp"
+                    tools:text="Đăng 9 giờ trước" />
+
+                <TextView
+                    android:id="@+id/tv_candidate_detail_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/candidate_text_secondary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="LinkedIn" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/candidate_border_light" />
+
+            <!-- Phần Về chúng tôi -->
+            <TextView
+                android:id="@+id/tv_candidate_detail_about_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/candidate_detail_about_title"
+                android:textColor="@color/candidate_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_candidate_detail_about_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/candidate_detail_default_about"
+                android:textColor="@color/candidate_text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Phần Yêu cầu & mô tả công việc -->
+            <TextView
+                android:id="@+id/tv_candidate_detail_requirements_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/candidate_detail_requirements_title"
+                android:textColor="@color/candidate_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_candidate_detail_requirements_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/candidate_detail_default_requirements"
+                android:textColor="@color/candidate_text_secondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Nút Ứng tuyển bằng CV này cố định ở đáy màn hình -->
+    <LinearLayout
+        android:id="@+id/ll_candidate_detail_bottom_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/candidate_bg_white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_candidate_detail_apply_cv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_candidate_apply_button"
+            android:text="@string/candidate_detail_apply_with_cv"
+            android:textAllCaps="false"
+            android:textColor="@color/candidate_bg_white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
