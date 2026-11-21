@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dashboard -->
+    <string name="admin_dashboard_title">Tổng quan quản trị</string>
+    <string name="admin_dashboard_greeting">Chào mừng trở lại, Admin!</string>
+
+    <!-- Thống kê -->
+    <string name="admin_statistics_title">Thống kê hệ thống</string>
+    <string name="admin_total_users">Tổng người dùng</string>
+    <string name="admin_total_jobs">Tổng việc làm</string>
+    <string name="admin_total_recruiters">Nhà tuyển dụng</string>
+    <string name="admin_active_jobs">Đang tuyển</string>
+
+    <!-- Hoạt động gần đây -->>
+    <string name="admin_recent_activities">Xin chào, Quản trị viên!</string>
+    <string name="admin_activity_new_user">Trương Văn Chiến vừa đăng ký tài khoản</string>
+    <string name="admin_activity_new_job">Công ty ABC vừa đăng tin tuyển dụng</string>
+    <string name="admin_activity_new_user_desc">Nguyễn Minh Nghĩa vừa cập nhật hồ sơ</string>
+
+    <!-- Quản lý người dùng -->
+    <string name="admin_users_title">Quản lý người dùng</string>
+    <string name="admin_users_search_hint">Tìm kiếm tên hoặc email...</string>
+    <string name="admin_users_filter_all">Tất cả</string>
+    <string name="admin_users_filter_candidate">Ứng viên</string>
+    <string name="admin_users_filter_recruiter">Nhà tuyển dụng</string>
+    <string name="admin_users_role_candidate">Ứng viên</string>
+    <string name="admin_users_role_recruiter">Nhà tuyển dụng</string>
+    <string name="admin_users_empty">Không tìm thấy người dùng</string>
+
+
+    <!-- Duyệt tin tuyển dụng -->
+    <string name="admin_jobs_title">Duyệt tin tuyển dụng</string>
+    <string name="admin_jobs_search_hint">Tìm kiếm tin tuyển dụng...</string>
+
+    <!-- Bộ lọc trạng thái -->
+    <string name="admin_jobs_filter_all">Tất cả</string>
+    <string name="admin_jobs_filter_pending">Chờ duyệt</string>
+    <string name="admin_jobs_filter_approved">Đã duyệt</string>
+    <string name="admin_jobs_filter_rejected">Đã từ chối</string>
+
+    <!-- Thông tin tin tuyển dụng -->
+    <string name="admin_job_company">Công ty</string>
+    <string name="admin_job_position">Vị trí</string>
+    <string name="admin_job_location">Địa điểm</string>
+    <string name="admin_job_salary">Mức lương</string>
+    <string name="admin_job_status">Trạng thái</string>
+
+    <!-- Trạng thái -->
+    <string name="admin_job_status_pending">Chờ duyệt</string>
+    <string name="admin_job_status_approved">Đã duyệt</string>
+    <string name="admin_job_status_rejected">Đã từ chối</string>
+
+    <!-- Thao tác -->
+    <string name="admin_job_detail">Xem chi tiết</string>
+    <string name="admin_job_approve">Duyệt tin</string>
+    <string name="admin_job_reject">Từ chối</string>
+    <string name="admin_jobs_empty">Không tìm thấy tin tuyển dụng</string>
+
+
+</resources>

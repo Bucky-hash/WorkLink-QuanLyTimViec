@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:background="@color/wl_surface"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tv_admin_job_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lập trình viên Flutter"
+        android:textColor="@color/wl_text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <!-- Công ty -->
+    <TextView
+        android:id="@+id/tv_admin_job_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/admin_job_company"
+        android:textColor="@color/wl_text_primary"
+        android:textSize="14sp" />
+
+    <!-- Ngày gửi -->
+    <TextView
+        android:id="@+id/tv_admin_job_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Ngày gửi: 21/10/2026"
+        android:textColor="@color/wl_text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Địa điểm -->
+    <TextView
+        android:id="@+id/tv_admin_job_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/admin_job_location"
+        android:textColor="@color/wl_text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Mức lương -->
+    <TextView
+        android:id="@+id/tv_admin_job_salary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/admin_job_salary"
+        android:textColor="@color/wl_text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Hình thức làm việc -->
+    <TextView
+        android:id="@+id/tv_admin_job_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Hình thức: Toàn thời gian"
+        android:textColor="@color/wl_text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Trạng thái -->
+    <TextView
+        android:id="@+id/tv_admin_job_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/wl_primary_light"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="@string/admin_job_status_pending"
+        android:textColor="@color/wl_primary_dark"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Lý do từ chối -->
+    <EditText
+        android:id="@+id/edt_admin_job_reject_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_admin_job_input"
+        android:gravity="top|start"
+        android:hint="Nhập lý do nếu từ chối tin tuyển dụng..."
+        android:inputType="textMultiLine"
+        android:minHeight="80dp"
+        android:padding="12dp"
+        android:textColor="@color/wl_text_primary"
+        android:textColorHint="@color/wl_text_hint"
+        android:textSize="13sp" />
+
+    <!-- Các nút thao tác -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_admin_job_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/admin_job_detail"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_admin_job_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/wl_primary"
+            android:text="@string/admin_job_approve"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_admin_job_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/wl_error"
+            android:text="@string/admin_job_reject"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
