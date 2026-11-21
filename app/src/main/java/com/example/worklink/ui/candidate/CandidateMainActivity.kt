@@ -45,6 +45,10 @@ class CandidateMainActivity : BaseHostActivity() {
                 val defaultJob = CandidateJobMockData.getRecommendedJobs().first()
                 CandidateJobDetailFragment.newInstance(defaultJob)
             }
+            label.equals(getString(R.string.candidate_nav_account), ignoreCase = true) ||
+                    label.contains("Tài khoản", ignoreCase = true) -> {
+                CandidateProfileFragment()
+            }
             else -> PlaceholderFragment.newInstance(title = label)
         }
     }
