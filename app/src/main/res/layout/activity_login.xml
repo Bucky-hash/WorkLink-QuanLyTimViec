@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: "Ứng viên - Đăng nhập" (375x812). Content: padding 24, các khối cách nhau 32 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wl_bg_screen"
+    android:fillViewport="true"
+    android:overScrollMode="ifContentScrolls">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <include layout="@layout/include_auth_header" />
+
+        <!-- Form: các trường cách nhau 20 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auth_email_label"
+                android:textAppearance="@style/TextAppearance.Worklink.Label" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.Worklink.TextInputLayout.Auth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    style="@style/Widget.Worklink.EditText.Auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_auth_mail"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/auth_email_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nhãn "Mật khẩu" bên trái, "Quên mật khẩu?" bên phải -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/auth_password_label"
+                    android:textAppearance="@style/TextAppearance.Worklink.Label" />
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/auth_forgot_password"
+                    android:textAppearance="@style/TextAppearance.Worklink.AuthLink" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/Widget.Worklink.TextInputLayout.Auth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:endIconDrawable="@drawable/ic_auth_eye_off"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/Widget.Worklink.EditText.Auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_auth_lock"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/auth_password_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cb_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:button="@drawable/selector_auth_checkbox"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="8dp"
+                android:text="@string/auth_remember_me"
+                android:textAppearance="@style/TextAppearance.Worklink.AuthBody"
+                app:buttonTint="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/auth_login_button"
+                android:textAppearance="@style/TextAppearance.Worklink.Button.Large"
+                app:cornerRadius="@dimen/wl_radius_auth_field" />
+        </LinearLayout>
+
+        <!-- Footer: đệm dọc 16, các dòng cách nhau 12 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_no_account"
+                    android:textAppearance="@style/TextAppearance.Worklink.AuthBody.Secondary" />
+
+                <TextView
+                    android:id="@+id/tv_go_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/auth_link_register"
+                    android:textAppearance="@style/TextAppearance.Worklink.AuthBody.Link" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_role_employer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/auth_role_employer"
+                android:textAppearance="@style/TextAppearance.Worklink.AuthLink" />
+
+            <TextView
+                android:id="@+id/tv_role_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/auth_role_admin"
+                android:textAppearance="@style/TextAppearance.Worklink.AuthLink" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

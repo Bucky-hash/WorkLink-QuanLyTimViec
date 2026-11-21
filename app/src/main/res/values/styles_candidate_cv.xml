@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Style riêng cho màn Tạo CV (Ứng viên). Không sửa styles.xml dùng chung. -->
+<resources>
+
+    <!-- "Tạo CV của bạn": Inter Bold 28, dòng cao 34 -->
+    <style name="TextAppearance.Worklink.CvTitle">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">34dp</item>
+    </style>
+
+    <!-- Mô tả dưới tiêu đề: Regular 15, dòng cao 22, #6B7280 -->
+    <style name="TextAppearance.Worklink.CvDescription">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/wl_text_secondary</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <!-- Tiêu đề thẻ: Inter Bold 17, dòng cao 24 -->
+    <style name="TextAppearance.Worklink.CvSectionTitle">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="lineHeight">24dp</item>
+    </style>
+
+    <!-- Chữ trong ô nhập: Regular 14, dòng cao 22 -->
+    <style name="TextAppearance.Worklink.CvField">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <!-- Nhãn tùy chọn (checkbox): Regular 13, dòng cao 20 -->
+    <style name="TextAppearance.Worklink.CvOption">
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">20dp</item>
+    </style>
+
+    <!-- Chữ viết tắt trong ảnh đại diện: Inter Bold 22, xanh -->
+    <style name="TextAppearance.Worklink.CvAvatar">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/wl_primary</item>
+    </style>
+
+    <!-- Ô nhập của màn Tạo CV: chữ 14, đệm 12 ngang / 13 dọc (cao 48 như Figma) -->
+    <style name="Widget.Worklink.EditText.Cv">
+        <item name="android:textAppearance">@style/TextAppearance.Worklink.CvField</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- Chip kỹ năng: nền #EFFAE8, cao 32, bo 8, nút x 14 -->
+    <style name="Widget.Worklink.Chip.Skill">
+        <item name="chipBackgroundColor">@color/wl_primary_light</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">32dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipStartPadding">10dp</item>
+        <item name="chipEndPadding">10dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="closeIconVisible">true</item>
+        <item name="closeIcon">@drawable/ic_cv_x</item>
+        <item name="closeIconSize">14dp</item>
+        <item name="closeIconTint">@color/wl_primary</item>
+        <item name="closeIconStartPadding">8dp</item>
+        <item name="closeIconEndPadding">0dp</item>
+        <item name="android:textColor">@color/wl_text_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Thuộc tính cho CvField (ô nhập của màn Tạo CV) -->
+    <declare-styleable name="CvField">
+        <attr name="cvLabel" format="string" />
+        <attr name="cvHint" format="string" />
+        <attr name="cvHelper" format="string" />
+        <attr name="cvEndIcon" format="reference" />
+        <attr name="cvKind" format="enum">
+            <enum name="text" value="0" />
+            <enum name="multiline" value="1" />
+            <enum name="picker" value="2" />
+        </attr>
+        <attr name="cvInputType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="email" value="1" />
+            <enum name="phone" value="2" />
+            <enum name="uri" value="3" />
+        </attr>
+        <attr name="cvMinLines" format="integer" />
+    </declare-styleable>
+</resources>

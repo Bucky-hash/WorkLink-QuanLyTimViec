@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nội dung của CvField: nhãn (SemiBold 14) - ô nhập cao 48 - dòng gợi ý (tùy chọn). Các khối cách nhau 8. -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/cv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Worklink.Label" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cv_input_layout"
+        style="@style/Widget.Worklink.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cv_input"
+            style="@style/Widget.Worklink.EditText.Cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/cv_helper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.Worklink.Caption"
+        android:visibility="gone" />
+</merge>

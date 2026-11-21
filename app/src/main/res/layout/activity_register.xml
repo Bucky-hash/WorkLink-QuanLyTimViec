@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Figma: "Ứng viên - Đăng ký" (375x812). Nội dung và thứ tự theo frame Đăng ký
+  (Email, Mật khẩu, nút Đăng ký, điều khoản, "Đã có tài khoản?"); giao diện theo Đăng nhập
+  (header + tab, ô Auth 56/12). Khoảng cách giữa 2 ô = 10 và trước nút = 16 theo Figma Đăng ký.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wl_bg_screen"
+    android:fillViewport="true"
+    android:overScrollMode="ifContentScrolls">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <include layout="@layout/include_auth_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.Worklink.TextInputLayout.Auth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    style="@style/Widget.Worklink.EditText.Auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_auth_mail"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/auth_register_email_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/Widget.Worklink.TextInputLayout.Auth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:endIconDrawable="@drawable/ic_auth_eye_off"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/Widget.Worklink.EditText.Auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_auth_lock"
+                    android:drawablePadding="12dp"
+                    android:hint="@string/auth_register_password_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/auth_register_button"
+                android:textAppearance="@style/TextAppearance.Worklink.Button.Large"
+                app:cornerRadius="@dimen/wl_radius_auth_field" />
+        </LinearLayout>
+
+        <!-- Điều khoản + "Đã có tài khoản?" cách nhau 16 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/auth_terms_prefix"
+                android:textAppearance="@style/TextAppearance.Worklink.AuthBody.Terms" />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/auth_terms_link"
+                android:textAppearance="@style/TextAppearance.Worklink.AuthBody.Terms.Link" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_have_account"
+                    android:textAppearance="@style/TextAppearance.Worklink.BodyLarge" />
+
+                <TextView
+                    android:id="@+id/tv_go_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/auth_link_login"
+                    android:textAppearance="@style/TextAppearance.Worklink.BodyLarge.Link" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
