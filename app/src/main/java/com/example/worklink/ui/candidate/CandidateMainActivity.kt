@@ -19,6 +19,10 @@ class CandidateMainActivity : BaseHostActivity() {
                     label.contains("Khám phá", ignoreCase = true) -> {
                 CandidateExploreFragment()
             }
+            label.equals(getString(R.string.candidate_nav_saved), ignoreCase = true) ||
+                    label.contains("Đã lưu", ignoreCase = true) -> {
+                CandidateSavedJobsFragment()
+            }
             label.equals(getString(R.string.candidate_nav_applied), ignoreCase = true) ||
                     label.contains("Ứng tuyển", ignoreCase = true) -> {
                 val defaultJob = CandidateJobMockData.getRecommendedJobs().first()
