@@ -46,4 +46,14 @@
     <string name="candidate_detail_unsaved_success">Đã bỏ lưu việc làm</string>
     <string name="candidate_detail_chat_toast">Mở khung trò chuyện hỗ trợ</string>
     <string name="candidate_detail_apply_toast">Ứng tuyển bằng CV cho vị trí: %1$s</string>
+
+    <!-- Màn hình Việc làm đã lưu -->
+    <string name="candidate_saved_jobs_title">Công việc đã lưu</string>
+    <string name="candidate_saved_action_add">Thêm</string>
+    <string name="candidate_saved_action_edit">Chỉnh sửa</string>
+    <string name="candidate_saved_action_done">Xong</string>
+    <string name="candidate_saved_empty_message">Chưa có công việc nào được lưu</string>
+    <string name="candidate_saved_removed_toast">Đã bỏ lưu \"%1$s\"</string>
+    <string name="candidate_saved_open_detail_cd">Xem chi tiết công việc</string>
+    <string name="candidate_saved_bookmark_cd">Trạng thái đã lưu</string>
 </resources>
