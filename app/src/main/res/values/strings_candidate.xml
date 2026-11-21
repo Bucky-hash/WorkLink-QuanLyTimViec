@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="candidate_greeting_prefix">Xin chào,</string>
+    <string name="candidate_default_user_name">BaoPhuc.</string>
+    <string name="candidate_search_hint">Vị trí, địa điểm hoặc từ khóa</string>
+
+    <string name="candidate_chip_role_programming">Lập trình</string>
+    <string name="candidate_chip_location">Địa điểm</string>
+    <string name="candidate_chip_remote">Làm việc từ xa</string>
+    <string name="candidate_chip_company">Công ty</string>
+    <string name="candidate_chip_job_type">Loại công việc</string>
+    <string name="candidate_chip_salary_range">Phạm vi lương</string>
+
+    <string name="candidate_section_recommended">Đề xuất cho bạn</string>
+    <string name="candidate_section_latest">Cập nhật mới</string>
+    <string name="candidate_action_see_all">Xem tất cả</string>
+
+    <string name="candidate_nav_explore">Khám phá</string>
+    <string name="candidate_nav_saved">Đã lưu</string>
+    <string name="candidate_nav_applied">Ứng tuyển</string>
+    <string name="candidate_nav_notifications">Thông báo</string>
+    <string name="candidate_nav_account">Tài khoản</string>
+
+    <string name="candidate_cd_filter">Bộ lọc tìm kiếm</string>
+    <string name="candidate_cd_search_icon">Biểu tượng tìm kiếm</string>
+    <string name="candidate_cd_company_logo">Logo công ty</string>
+    <string name="candidate_cd_source_logo">Nguồn tuyển dụng</string>
+    <string name="candidate_cd_bookmark">Lưu việc làm</string>
+</resources>

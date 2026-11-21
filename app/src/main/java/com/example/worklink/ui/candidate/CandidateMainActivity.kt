@@ -11,6 +11,12 @@ class CandidateMainActivity : BaseHostActivity() {
 
     override val role = Role.CANDIDATE
 
-    override fun createFragment(tab: NavTab): Fragment =
-        PlaceholderFragment.newInstance(getString(tab.label))
+    override fun createFragment(tab: NavTab): Fragment {
+        val label = getString(tab.label)
+        return if (label.equals("Khám phá", ignoreCase = true)) {
+            CandidateExploreFragment()
+        } else {
+            PlaceholderFragment.newInstance(label)
+        }
+    }
 }
