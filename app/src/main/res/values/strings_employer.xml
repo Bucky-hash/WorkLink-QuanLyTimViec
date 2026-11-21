@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Lịch phỏng vấn - Nhà tuyển dụng (Employer) -->
+    <string name="employer_interview_title">Lịch phỏng vấn</string>
+    <string name="employer_interview_action_create">Tạo lịch</string>
+    <string name="employer_interview_prev_cd">Tháng trước</string>
+    <string name="employer_interview_next_cd">Tháng sau</string>
+    <string name="employer_interview_month_year">Tháng %1$d, %2$d</string>
+    <string name="employer_interview_week_range">19-25/10/2026</string>
+    <string name="employer_interview_selected_date">Hôm nay, 21/10</string>
+    <string name="employer_interview_day_month">%1$d/%2$d</string>
+    <string name="employer_interview_day_summary">%1$s · %2$d buổi phỏng vấn</string>
+    <string name="employer_interview_empty">Không có buổi phỏng vấn nào trong ngày này</string>
+    <string name="employer_interview_create_toast">Mở form tạo lịch phỏng vấn mới</string>
+    <string name="employer_interview_item_toast">Buổi phỏng vấn với %1$s (%2$s)</string>
+
+    <string name="employer_interview_day_t2">T2</string>
+    <string name="employer_interview_day_t3">T3</string>
+    <string name="employer_interview_day_t4">T4</string>
+    <string name="employer_interview_day_t5">T5</string>
+    <string name="employer_interview_day_t6">T6</string>
+    <string name="employer_interview_day_t7">T7</string>
+    <string name="employer_interview_day_cn">CN</string>
+
+    <string name="employer_interview_full_t2">Thứ Hai</string>
+    <string name="employer_interview_full_t3">Thứ Ba</string>
+    <string name="employer_interview_full_t4">Thứ Tư</string>
+    <string name="employer_interview_full_t5">Thứ Năm</string>
+    <string name="employer_interview_full_t6">Thứ Sáu</string>
+    <string name="employer_interview_full_t7">Thứ Bảy</string>
+    <string name="employer_interview_full_cn">Chủ Nhật</string>
+
+    <string name="employer_interview_status_upcoming">Sắp diễn ra</string>
+    <string name="employer_interview_status_confirmed">Đã xác nhận</string>
+</resources>
