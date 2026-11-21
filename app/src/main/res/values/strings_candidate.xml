@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Màn hình Khám phá -->
     <string name="candidate_greeting_prefix">Xin chào,</string>
     <string name="candidate_default_user_name">BaoPhuc.</string>
     <string name="candidate_search_hint">Vị trí, địa điểm hoặc từ khóa</string>
@@ -26,4 +27,23 @@
     <string name="candidate_cd_company_logo">Logo công ty</string>
     <string name="candidate_cd_source_logo">Nguồn tuyển dụng</string>
     <string name="candidate_cd_bookmark">Lưu việc làm</string>
+
+    <!-- Màn hình Chi tiết việc làm -->
+    <string name="candidate_detail_back">Quay lại</string>
+    <string name="candidate_detail_banner_desc">Hình ảnh môi trường làm việc của công ty</string>
+    <string name="candidate_detail_chat_desc">Nhắn tin hỗ trợ</string>
+    <string name="candidate_detail_about_title">Về chúng tôi</string>
+    <string name="candidate_detail_requirements_title">Yêu cầu &amp; mô tả công việc</string>
+    <string name="candidate_detail_apply_with_cv">Ứng tuyển bằng CV này</string>
+    <string name="candidate_detail_default_job_title">Nhà thiết kế UX</string>
+    <string name="candidate_detail_default_company">FPT Software</string>
+    <string name="candidate_detail_default_location">Hà Nội (Làm việc từ xa)</string>
+    <string name="candidate_detail_default_posted">Đăng 9 giờ trước</string>
+    <string name="candidate_detail_default_source">LinkedIn</string>
+    <string name="candidate_detail_default_about">Điều gì đoàn kết tất cả các thành viên FPT Software trên các đội và khu vực là chúng tôi đều nỗ lực mang lại niềm vui cho khách hàng và làm cho cuộc sống của họ dễ dàng hơn. Sứ mệnh của chúng tôi thúc đẩy chúng tôi tìm kiếm những quan điểm đa dạng.</string>
+    <string name="candidate_detail_default_requirements">• Thiết kế giao diện người dùng và trải nghiệm mượt mà trên ứng dụng di động.\n• Phối hợp chặt chẽ với đội ngũ phát triển sản phẩm để hiện thực hóa thiết kế.\n• Nghiên cứu hành vi người dùng và tối ưu luồng thao tác.</string>
+    <string name="candidate_detail_saved_success">Đã lưu việc làm</string>
+    <string name="candidate_detail_unsaved_success">Đã bỏ lưu việc làm</string>
+    <string name="candidate_detail_chat_toast">Mở khung trò chuyện hỗ trợ</string>
+    <string name="candidate_detail_apply_toast">Ứng tuyển bằng CV cho vị trí: %1$s</string>
 </resources>
