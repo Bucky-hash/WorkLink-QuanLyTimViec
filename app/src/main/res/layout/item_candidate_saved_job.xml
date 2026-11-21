@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_candidate_saved_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_candidate_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/iv_candidate_saved_company_logo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_avatar_placeholder"
+        android:contentDescription="@string/candidate_saved_open_detail_cd"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_compass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_candidate_saved_bookmark"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/candidate_saved_bookmark_cd"
+        android:src="@android:drawable/btn_star_big_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_candidate_saved_job_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_bold"
+        android:maxLines="1"
+        android:text="@string/candidate_detail_default_job_title"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_candidate_saved_bookmark"
+        app:layout_constraintStart_toEndOf="@+id/iv_candidate_saved_company_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_candidate_saved_company_logo" />
+
+    <TextView
+        android:id="@+id/tv_candidate_saved_company_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_medium"
+        android:maxLines="1"
+        android:text="@string/candidate_detail_default_company"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_candidate_saved_job_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_candidate_saved_job_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_candidate_saved_job_title" />
+
+    <ImageView
+        android:id="@+id/iv_candidate_saved_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/candidate_saved_open_detail_cd"
+        android:src="@android:drawable/ic_media_next"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_candidate_saved_meta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_candidate_saved_location" />
+
+    <TextView
+        android:id="@+id/tv_candidate_saved_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_regular"
+        android:maxLines="1"
+        android:text="@string/candidate_detail_default_location"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_candidate_saved_arrow"
+        app:layout_constraintStart_toStartOf="@+id/iv_candidate_saved_company_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_candidate_saved_company_logo" />
+
+    <TextView
+        android:id="@+id/tv_candidate_saved_meta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_regular"
+        android:maxLines="1"
+        android:text="@string/candidate_detail_default_posted"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_candidate_saved_source"
+        app:layout_constraintStart_toStartOf="@+id/tv_candidate_saved_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_candidate_saved_location" />
+
+    <TextView
+        android:id="@+id/tv_candidate_saved_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/candidate_detail_default_source"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_candidate_saved_meta"
+        app:layout_constraintEnd_toStartOf="@+id/iv_candidate_saved_arrow"
+        app:layout_constraintStart_toEndOf="@+id/tv_candidate_saved_meta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
