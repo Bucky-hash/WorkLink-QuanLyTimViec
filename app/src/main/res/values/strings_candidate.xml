@@ -6,8 +6,18 @@
     <string name="candidate_search_hint">Vị trí, địa điểm hoặc từ khóa</string>
 
     <string name="candidate_chip_role_programming">Lập trình</string>
+    <string name="candidate_chip_role_ui_ux">UI/UX Design</string>
+    <string name="candidate_chip_role_frontend">Frontend</string>
+
     <string name="candidate_chip_location">Địa điểm</string>
+    <string name="candidate_chip_loc_hanoi">Hà Nội</string>
+    <string name="candidate_chip_loc_danang">Đà Nẵng</string>
+    <string name="candidate_chip_loc_hcm">TP.HCM</string>
+
     <string name="candidate_chip_remote">Làm việc từ xa</string>
+    <string name="candidate_chip_type_fulltime">Toàn thời gian</string>
+    <string name="candidate_chip_type_parttime">Bán thời gian</string>
+
     <string name="candidate_chip_company">Công ty</string>
     <string name="candidate_chip_job_type">Loại công việc</string>
     <string name="candidate_chip_salary_range">Phạm vi lương</string>
@@ -56,4 +66,26 @@
     <string name="candidate_saved_removed_toast">Đã bỏ lưu \"%1$s\"</string>
     <string name="candidate_saved_open_detail_cd">Xem chi tiết công việc</string>
     <string name="candidate_saved_bookmark_cd">Trạng thái đã lưu</string>
+
+    <!-- Màn hình Tùy chọn việc làm -->
+    <string name="candidate_pref_action_cancel">Hủy</string>
+    <string name="candidate_pref_action_confirm">Xác nhận</string>
+    <string name="candidate_pref_title">Bạn đang tìm kiếm loại công việc nào?</string>
+    <string name="candidate_pref_subtitle">Chọn các tùy chọn phù hợp để chúng tôi gợi ý việc làm cho bạn.</string>
+    <string name="candidate_pref_section_role">Vai trò bạn muốn xem</string>
+    <string name="candidate_pref_add_role">+ Thêm vai trò</string>
+    <string name="candidate_pref_section_location">Nơi bạn muốn làm việc</string>
+    <string name="candidate_pref_add_location">+ Thêm địa điểm</string>
+    <string name="candidate_pref_section_job_type">Loại công việc phù hợp</string>
+    <string name="candidate_pref_add_job_type">+ Thêm loại</string>
+    <string name="candidate_pref_section_salary">Phạm vi lương mong muốn</string>
+    <string name="candidate_pref_salary_summary">%1$d - %2$d triệu/tháng</string>
+    <string name="candidate_pref_salary_min_label">10 triệu</string>
+    <string name="candidate_pref_salary_max_label">30 triệu</string>
+    <string name="candidate_pref_input_role_title">Thêm vai trò mới</string>
+    <string name="candidate_pref_input_location_title">Thêm địa điểm làm việc</string>
+    <string name="candidate_pref_input_job_type_title">Thêm loại công việc</string>
+    <string name="candidate_pref_input_hint">Nhập lựa chọn của bạn</string>
+    <string name="candidate_pref_saved_toast">Đã cập nhật tùy chọn việc làm</string>
+    <string name="candidate_pref_cancelled_toast">Đã hủy thay đổi tùy chọn</string>
 </resources>
