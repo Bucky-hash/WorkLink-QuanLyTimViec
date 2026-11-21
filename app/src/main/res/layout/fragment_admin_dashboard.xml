@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/wl_bg_screen"
+    android:background="#F5F8F7"
     android:fillViewport="true"
     android:scrollbars="none">
 
@@ -10,236 +10,257 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
-        <!-- Tiêu đề -->
+        <!-- HEADER -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/admin_dashboard_title"
-            android:textColor="@color/wl_text_primary"
-            android:textSize="22sp"
+            android:textColor="#075E46"
+            android:textSize="23sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:text="@string/admin_dashboard_greeting"
-            android:textColor="@color/wl_text_secondary"
-            android:textSize="13sp" />
+            android:textColor="#71827C"
+            android:textSize="14sp" />
 
-        <!-- Thống kê hàng 1 -->
+        <!-- STATISTICS ROW 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
+            <!-- TOTAL USERS -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="5dp"
+                android:layout_height="112dp"
+                android:layout_marginEnd="7dp"
                 android:layout_weight="1"
-                android:background="#EFFAE8"
+                android:background="@drawable/bg_admin_stat_card"
+                android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/admin_total_users"
-                    android:textColor="@color/wl_text_secondary"
-                    android:textSize="12sp" />
+                    android:textColor="#71827C"
+                    android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="1.250"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="21sp"
+                    android:textColor="#075E46"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
 
+            <!-- TOTAL JOBS -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="5dp"
+                android:layout_height="112dp"
+                android:layout_marginStart="7dp"
                 android:layout_weight="1"
-                android:background="#EFFBF5"
+                android:background="@drawable/bg_admin_stat_card"
+                android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/admin_total_jobs"
-                    android:textColor="@color/wl_text_secondary"
-                    android:textSize="12sp" />
+                    android:textColor="#71827C"
+                    android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="350"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="21sp"
+                    android:textColor="#075E46"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
+
         </LinearLayout>
 
-        <!-- Thống kê hàng 2 -->
+        <!-- STATISTICS ROW 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
+            <!-- RECRUITERS -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="5dp"
+                android:layout_height="112dp"
+                android:layout_marginEnd="7dp"
                 android:layout_weight="1"
-                android:background="#FFF7ED"
+                android:background="@drawable/bg_admin_stat_card"
+                android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/admin_total_recruiters"
-                    android:textColor="@color/wl_text_secondary"
-                    android:textSize="12sp" />
+                    android:textColor="#71827C"
+                    android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="120"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="21sp"
+                    android:textColor="#075E46"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
 
+            <!-- ACTIVE JOBS -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="5dp"
+                android:layout_height="112dp"
+                android:layout_marginStart="7dp"
                 android:layout_weight="1"
-                android:background="#FFF1F2"
+                android:background="@drawable/bg_admin_stat_card"
+                android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/admin_active_jobs"
-                    android:textColor="@color/wl_text_secondary"
-                    android:textSize="12sp" />
+                    android:textColor="#71827C"
+                    android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="85"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="21sp"
+                    android:textColor="#075E46"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
+
         </LinearLayout>
 
-        <!-- Hoạt động gần đây -->
+        <!-- RECENT ACTIVITIES TITLE -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:text="@string/admin_recent_activities"
-            android:textColor="@color/wl_text_primary"
+            android:textColor="#075E46"
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <!-- RECENT ACTIVITIES CARD -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/wl_surface"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_admin_stat_card"
             android:orientation="vertical"
-            android:padding="12dp">
+            android:padding="16dp">
 
-            <!-- Hoạt động 1 -->
+            <!-- ACTIVITY 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
 
                 <TextView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
                     android:background="@drawable/bg_admin_activity_dot" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:text="@string/admin_activity_new_user"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="12sp" />
+                    android:textColor="#344B43"
+                    android:textSize="13sp" />
             </LinearLayout>
 
-            <!-- Hoạt động 2 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EAF0ED" />
+
+            <!-- ACTIVITY 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
 
                 <TextView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
                     android:background="@drawable/bg_admin_activity_dot" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:text="@string/admin_activity_new_job"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="12sp" />
+                    android:textColor="#344B43"
+                    android:textSize="13sp" />
             </LinearLayout>
 
-            <!-- Hoạt động 3 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EAF0ED" />
+
+            <!-- ACTIVITY 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
 
                 <TextView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
                     android:background="@drawable/bg_admin_activity_dot" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:text="@string/admin_activity_new_user_desc"
-                    android:textColor="@color/wl_text_primary"
-                    android:textSize="12sp" />
+                    android:textColor="#344B43"
+                    android:textSize="13sp" />
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>
