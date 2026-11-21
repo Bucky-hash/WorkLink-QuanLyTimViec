@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chấm đang hoạt động: xanh #6CC51D, viền trắng 2dp để tách khỏi avatar -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="@color/wl_chat_fab" />
+    <stroke android:width="2dp" android:color="@color/white" />
+</shape>

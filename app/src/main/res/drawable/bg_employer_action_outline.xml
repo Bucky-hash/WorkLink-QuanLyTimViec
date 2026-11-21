@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: nút "Nhắn tin" nền trắng, viền #E4EAE6, bo 8 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/wl_primary_chip">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <stroke android:width="1dp" android:color="@color/wl_employer_border" />
+            <corners android:radius="@dimen/wl_radius_chip" />
+        </shape>
+    </item>
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="@dimen/wl_radius_chip" />
+        </shape>
+    </item>
+</ripple>

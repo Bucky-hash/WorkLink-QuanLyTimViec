@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: "Summary card" ~168x54, thẻ trắng viền #E4EAE6 bo 12, số 21 Bold + nhãn 9, icon 19 xanh #6CC51D bên phải -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/bg_employer_card"
+    android:gravity="center_vertical"
+    android:minHeight="54dp"
+    android:orientation="horizontal"
+    android:paddingStart="9dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="9dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/metric_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.Worklink.Employer.MetricValue" />
+
+        <TextView
+            android:id="@+id/metric_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Worklink.Employer.MetricLabel" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/metric_icon"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:importantForAccessibility="no"
+        android:tint="@color/wl_chat_fab" />
+</LinearLayout>

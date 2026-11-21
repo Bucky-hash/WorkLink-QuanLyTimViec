@@ -35,4 +35,47 @@
     <string name="dev_role_candidate">Ứng viên</string>
     <string name="dev_role_employer">Nhà tuyển dụng</string>
     <string name="dev_role_admin">Quản trị</string>
+
+    <!-- Nhà tuyển dụng: Trang chủ -->
+    <string name="employer_home_greeting_hint">Xin chào,</string>
+    <string name="employer_home_metric_value">%02d</string>
+    <string name="employer_home_metric_active_posts">Tin đang hiển thị</string>
+    <string name="employer_home_metric_new_applications">Hồ sơ mới</string>
+    <string name="employer_home_metric_interviews_today">Lịch phỏng vấn hôm nay</string>
+    <string name="employer_home_metric_expiring_posts">Tin sắp hết hạn</string>
+
+    <string name="employer_home_shortcuts_title">Tiện ích tuyển dụng</string>
+    <string name="employer_shortcut_post_job">Đăng tin\ntuyển dụng</string>
+    <string name="employer_shortcut_manage_posts">Quản lý\nbài đăng</string>
+    <string name="employer_shortcut_manage_candidates">Quản lý\nứng viên</string>
+    <string name="employer_shortcut_interviews">Lịch\nphỏng vấn</string>
+    <string name="employer_shortcut_company_profile">Hồ sơ\ncông ty</string>
+    <string name="employer_shortcut_messages">Tin nhắn</string>
+    <string name="employer_shortcut_statistics">Thống kê</string>
+    <string name="employer_shortcut_account_settings">Cài đặt\ntài khoản</string>
+
+    <string name="employer_home_latest_applicants_title">Hồ sơ mới nhất</string>
+    <string name="employer_home_view_all">Xem tất cả</string>
+    <string name="employer_applicant_meta">%1$s · %2$d năm kinh nghiệm</string>
+    <string name="employer_applicant_status_new">Mới</string>
+    <string name="employer_applicant_status_cv_approved">Đã duyệt CV</string>
+    <string name="employer_applicant_status_interview">Phỏng vấn</string>
+    <string name="employer_applicant_action_view_profile">Xem hồ sơ</string>
+    <string name="employer_applicant_action_message">Nhắn tin</string>
+    <string name="employer_unread_overflow">99+</string>
+    <string name="cd_company_avatar">Logo công ty</string>
+
+    <!-- Nhà tuyển dụng: Hộp thư -->
+    <string name="employer_inbox_title">Tin nhắn</string>
+    <string name="employer_inbox_search_hint">Tìm kiếm cuộc trò chuyện</string>
+    <string name="employer_inbox_filter_all">Tất cả</string>
+    <string name="employer_inbox_filter_unread">Chưa đọc</string>
+    <string name="employer_inbox_empty">Chưa có cuộc trò chuyện nào</string>
+    <string name="employer_inbox_empty_unread">Bạn đã đọc hết tin nhắn</string>
+    <string name="employer_inbox_empty_search">Không tìm thấy cuộc trò chuyện phù hợp</string>
+    <string name="employer_inbox_active_description">%1$s đang hoạt động</string>
+    <string name="employer_inbox_row_description">%1$s. %2$s</string>
+    <string name="employer_inbox_row_unread_description">%1$s, %2$d tin chưa đọc. %3$s</string>
+    <string name="cd_inbox_camera">Máy ảnh</string>
+    <string name="cd_inbox_new_conversation">Cuộc trò chuyện mới</string>
 </resources>

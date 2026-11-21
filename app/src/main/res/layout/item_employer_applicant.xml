@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Figma: "Candidate row" 343x79 — thẻ trắng viền #E4EAE6 bo 12, đệm 8, khoảng cách dọc 5.
+    Hàng trên: ảnh tròn 32 + (tên 12 SemiBold · nhãn trạng thái) / (vị trí · kinh nghiệm 10).
+    Hàng dưới: 2 nút cao 25, cách nhau 6.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_employer_card"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/applicant_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_avatar_placeholder"
+            android:importantForAccessibility="no"
+            android:padding="7dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user"
+            android:tint="@color/wl_text_secondary"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Worklink.Circle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="18dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/applicant_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.Worklink.Employer.ApplicantName" />
+
+                <TextView
+                    android:id="@+id/applicant_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingStart="6dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="3dp"
+                    android:textAppearance="@style/TextAppearance.Worklink.Employer.Status" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/applicant_meta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Worklink.Employer.ApplicantMeta" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/action_view_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_employer_action_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/employer_applicant_action_view_profile"
+            android:textAppearance="@style/TextAppearance.Worklink.Employer.Action"
+            android:textColor="@color/wl_primary_dark" />
+
+        <TextView
+            android:id="@+id/action_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_employer_action_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/employer_applicant_action_message"
+            android:textAppearance="@style/TextAppearance.Worklink.Employer.Action" />
+    </LinearLayout>
+</LinearLayout>
