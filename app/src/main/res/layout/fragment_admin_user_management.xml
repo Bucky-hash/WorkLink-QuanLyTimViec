@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wl_bg_screen"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tv_admin_users_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_users_title"
+        android:textColor="@color/wl_text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Ô tìm kiếm -->
+    <EditText
+        android:id="@+id/edt_admin_users_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/wl_surface"
+        android:hint="@string/admin_users_search_hint"
+        android:inputType="text"
+        android:paddingHorizontal="14dp"
+        android:textColor="@color/wl_text_primary"
+        android:textColorHint="@color/wl_text_hint"
+        android:textSize="14sp" />
+
+    <!-- Bộ lọc -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_admin_filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/wl_primary"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:text="@string/admin_users_filter_all"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_admin_filter_candidate"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/wl_surface"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:text="@string/admin_users_filter_candidate"
+                android:textColor="@color/wl_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_admin_filter_recruiter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/wl_surface"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:text="@string/admin_users_filter_recruiter"
+                android:textColor="@color/wl_text_secondary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Danh sách người dùng -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_admin_users"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        tools:listitem="@layout/item_admin_user" />
+
+</LinearLayout>
