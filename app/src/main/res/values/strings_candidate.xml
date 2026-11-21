@@ -88,4 +88,43 @@
     <string name="candidate_pref_input_hint">Nhập lựa chọn của bạn</string>
     <string name="candidate_pref_saved_toast">Đã cập nhật tùy chọn việc làm</string>
     <string name="candidate_pref_cancelled_toast">Đã hủy thay đổi tùy chọn</string>
+
+    <!-- Màn hình Tài khoản cá nhân (Hồ sơ ứng viên) -->
+    <string name="candidate_profile_title">Tài khoản cá nhân</string>
+    <string name="candidate_profile_subtitle">Quản lý hồ sơ, CV và cài đặt cá nhân</string>
+    <string name="candidate_profile_role_badge">Ứng viên</string>
+    <string name="candidate_profile_logout">Đăng xuất</string>
+
+    <string name="candidate_profile_label_name">Họ và tên</string>
+    <string name="candidate_profile_label_email">Email</string>
+    <string name="candidate_profile_label_phone">Số điện thoại</string>
+
+    <string name="candidate_profile_default_name">Trương Văn Chiến</string>
+    <string name="candidate_profile_default_email">chien@example.com</string>
+    <string name="candidate_profile_default_phone">09xxxxxxXX</string>
+    <string name="candidate_profile_default_cv_file">CV_Frontend_Developer.pdf</string>
+
+    <string name="candidate_profile_cv_section_title">Quản lý CV của tôi</string>
+    <string name="candidate_profile_cv_delete">Xóa</string>
+    <string name="candidate_profile_cv_create_new">+ Tạo CV mới</string>
+    <string name="candidate_profile_cv_empty">Chưa có CV nào được lưu</string>
+    <string name="candidate_profile_cv_deleted_toast">Đã xóa CV: %1$s</string>
+
+    <string name="candidate_profile_edit_info">Chỉnh sửa thông tin</string>
+    <string name="candidate_profile_change_password">Đổi mật khẩu</string>
+
+    <string name="candidate_profile_dialog_edit_title">Chỉnh sửa thông tin cá nhân</string>
+    <string name="candidate_profile_dialog_password_title">Đổi mật khẩu</string>
+    <string name="candidate_profile_hint_name">Họ và tên</string>
+    <string name="candidate_profile_hint_phone">Số điện thoại</string>
+    <string name="candidate_profile_hint_old_password">Mật khẩu hiện tại</string>
+    <string name="candidate_profile_hint_new_password">Mật khẩu mới</string>
+    <string name="candidate_profile_action_save">Lưu</string>
+    <string name="candidate_profile_action_cancel">Hủy</string>
+
+    <string name="candidate_profile_updated_toast">Đã cập nhật thông tin cá nhân</string>
+    <string name="candidate_profile_password_changed_toast">Đã đổi mật khẩu thành công</string>
+    <string name="candidate_profile_password_empty_toast">Vui lòng nhập đầy đủ mật khẩu</string>
+    <string name="candidate_profile_logout_toast">Đã đăng xuất khỏi tài khoản</string>
+    <string name="candidate_profile_create_cv_toast">Mở trình tạo CV mới</string>
 </resources>
