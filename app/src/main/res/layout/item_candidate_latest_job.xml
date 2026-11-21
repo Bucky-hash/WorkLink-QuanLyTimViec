@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_candidate_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iv_candidate_latest_company_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_candidate_chip_normal"
+        android:contentDescription="@string/candidate_cd_company_logo"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        tools:src="@android:drawable/sym_def_app_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_candidate_latest_job_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/candidate_text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Chuyên viên Marketing" />
+
+        <TextView
+            android:id="@+id/tv_candidate_latest_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/candidate_text_secondary"
+            android:textSize="13sp"
+            tools:text="VNG" />
+
+        <TextView
+            android:id="@+id/tv_candidate_latest_meta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/candidate_text_hint"
+            android:textSize="12sp"
+            tools:text="TP.HCM (Làm việc từ xa) • 9 giờ trước" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_candidate_latest_bookmark"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/candidate_cd_bookmark"
+        android:src="@android:drawable/btn_star_big_off" />
+</LinearLayout>
