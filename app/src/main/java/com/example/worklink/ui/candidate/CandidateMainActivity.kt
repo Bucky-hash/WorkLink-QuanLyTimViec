@@ -1,6 +1,8 @@
 package com.example.worklink.ui.candidate
 
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.worklink.R
 import com.example.worklink.core.base.BaseHostActivity
@@ -18,6 +20,12 @@ class CandidateMainActivity : BaseHostActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         hasCompletedPreferences = savedInstanceState?.getBoolean(KEY_PREF_COMPLETED, false) ?: false
         super.onCreate(savedInstanceState)
+        updateHostChromeVisibility(showChrome = hasCompletedPreferences)
+    }
+
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        updateHostChromeVisibility(showChrome = hasCompletedPreferences)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -59,6 +67,8 @@ class CandidateMainActivity : BaseHostActivity() {
 
     fun completePreferencesAndOpenExplore() {
         hasCompletedPreferences = true
+        updateHostChromeVisibility(showChrome = true)
+
         val prefFragment = supportFragmentManager.fragments.firstOrNull {
             it is CandidateJobPreferencesFragment
         }
@@ -68,6 +78,25 @@ class CandidateMainActivity : BaseHostActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(containerId, CandidateExploreFragment(), tabTag)
                 .commitNow()
+        }
+    }
+
+    private fun updateHostChromeVisibility(showChrome: Boolean) {
+        val rootView = findViewById<ViewGroup>(android.R.id.content) ?: return
+        val visibility = if (showChrome) View.VISIBLE else View.GONE
+        toggleChromeViews(rootView, visibility)
+    }
+
+    private fun toggleChromeViews(view: View, visibility: Int) {
+        val className = view.javaClass.simpleName
+        if (className == "WorklinkBottomNav" || className == "ChatFab") {
+            view.visibility = visibility
+            return
+        }
+        if (view is ViewGroup) {
+            for (i in 0 until view.childCount) {
+                toggleChromeViews(view.getChildAt(i), visibility)
+            }
         }
     }
 
