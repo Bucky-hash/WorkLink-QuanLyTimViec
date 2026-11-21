@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: calendar-check-2 19x19, nét 1.7. Màu đặt bằng android:tint ở nơi dùng. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="19dp"
+    android:height="19dp"
+    android:viewportWidth="19"
+    android:viewportHeight="19">
+    <path
+        android:pathData="M6.333,1.583L6.333,4.75M12.667,1.583L12.667,4.75M16.626,11.083L16.626,4.75C16.626,4.33 16.459,3.927 16.162,3.63C15.865,3.333 15.462,3.166 15.042,3.166L3.958,3.166C3.538,3.166 3.136,3.333 2.839,3.63C2.542,3.927 2.375,4.33 2.375,4.75L2.375,15.834C2.375,16.254 2.542,16.657 2.839,16.954C3.136,17.25 3.538,17.417 3.958,17.417L10.292,17.417M2.375,7.917L16.626,7.917M12.667,15.834L14.25,17.417L17.417,14.25"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

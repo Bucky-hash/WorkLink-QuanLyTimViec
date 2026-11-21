@@ -262,4 +262,128 @@
         <item name="android:tint">@color/wl_text_primary</item>
         <item name="android:contentDescription">@string/cd_back</item>
     </style>
+
+    <!-- ===================== Nhà tuyển dụng: Trang chủ (Inter, đúng cỡ chữ Figma) ===================== -->
+    <style name="TextAppearance.Worklink.Employer" parent="TextAppearance.Worklink">
+        <item name="android:textColor">@color/wl_ink</item>
+    </style>
+    <!-- "Xin chào," 12 Regular xám -->
+    <style name="TextAppearance.Worklink.Employer.GreetingHint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/wl_employer_text_muted</item>
+    </style>
+    <!-- Tên công ty 20 Bold -->
+    <style name="TextAppearance.Worklink.Employer.CompanyName">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- Số liệu thống kê 21 Bold -->
+    <style name="TextAppearance.Worklink.Employer.MetricValue">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+    <!-- Nhãn số liệu 9 Regular xám -->
+    <style name="TextAppearance.Worklink.Employer.MetricLabel">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/wl_employer_text_muted</item>
+    </style>
+    <!-- Tiêu đề mục 15 Bold -->
+    <style name="TextAppearance.Worklink.Employer.SectionTitle">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- "Xem tất cả" 10 SemiBold xanh đậm -->
+    <style name="TextAppearance.Worklink.Employer.Link">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/wl_primary_dark</item>
+    </style>
+    <!-- Nhãn lối tắt 10 Medium, cao dòng 12 -->
+    <style name="TextAppearance.Worklink.Employer.ShortcutLabel">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">12dp</item>
+    </style>
+    <!-- Tên ứng viên 12 SemiBold -->
+    <style name="TextAppearance.Worklink.Employer.ApplicantName">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Vị trí · kinh nghiệm 10 Regular xám -->
+    <style name="TextAppearance.Worklink.Employer.ApplicantMeta">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/wl_employer_text_muted</item>
+    </style>
+    <!-- Nhãn trạng thái 10 SemiBold (màu đặt theo trạng thái trong code) -->
+    <style name="TextAppearance.Worklink.Employer.Status">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <!-- Nút hành động nhanh 11 Medium -->
+    <style name="TextAppearance.Worklink.Employer.Action">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <!-- Số trên chuông thông báo 9 Bold trắng -->
+    <style name="TextAppearance.Worklink.Employer.BellCount">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- ===================== Nhà tuyển dụng: Hộp thư ===================== -->
+    <!-- Figma vẽ bằng Work Sans; app chưa có font này nên dùng Inter cho đồng bộ với Trang chủ -->
+    <!-- Tiêu đề "Tin nhắn" 24 Bold -->
+    <style name="TextAppearance.Worklink.Employer.InboxTitle">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <!-- Tên cuộc trò chuyện 14 SemiBold -->
+    <style name="TextAppearance.Worklink.Employer.InboxName">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- Tin nhắn cuối 12 Regular xám. Chưa đọc: Medium, màu đậm -->
+    <style name="TextAppearance.Worklink.Employer.InboxPreview">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/wl_employer_text_muted</item>
+    </style>
+    <style name="TextAppearance.Worklink.Employer.InboxPreview.Unread">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/wl_ink</item>
+    </style>
+    <!-- Giờ gửi 11 Regular xám. Chưa đọc: SemiBold xanh đậm -->
+    <style name="TextAppearance.Worklink.Employer.InboxTime">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/wl_employer_text_muted</item>
+    </style>
+    <style name="TextAppearance.Worklink.Employer.InboxTime.Unread">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textColor">@color/wl_primary_dark</item>
+    </style>
+    <!-- Tên ở dải đang hoạt động 11 Medium -->
+    <style name="TextAppearance.Worklink.Employer.InboxActiveName">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <!-- Nhãn chip lọc 13 SemiBold (màu theo trạng thái chọn, đặt ở layout) -->
+    <style name="TextAppearance.Worklink.Employer.InboxFilter">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>

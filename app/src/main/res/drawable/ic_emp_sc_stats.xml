@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: chart-no-axes-combined 18x18, nét 1.7. Màu đặt bằng android:tint ở nơi dùng. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18dp"
+    android:height="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <path
+        android:pathData="M9,12L9,15.75M12,10.5L12,15.75M15,7.5L15,15.75M16.501,2.25L10.016,8.734C9.981,8.769 9.939,8.797 9.894,8.816C9.848,8.835 9.799,8.845 9.75,8.845C9.701,8.845 9.652,8.835 9.606,8.816C9.561,8.797 9.519,8.769 9.485,8.734L7.015,6.266C6.945,6.195 6.85,6.156 6.75,6.156C6.651,6.156 6.555,6.195 6.485,6.266L1.499,11.25M3,13.5L3,15.75M6,10.5L6,15.75"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

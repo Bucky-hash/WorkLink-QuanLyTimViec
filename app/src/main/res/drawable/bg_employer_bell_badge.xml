@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: Notification badge cao 14, nền #6CC51D, bo tròn -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/wl_chat_fab" />
+    <corners android:radius="7dp" />
+</shape>

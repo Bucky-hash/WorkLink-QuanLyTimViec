@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: Shortcut icon 32x30, nền #EFFAE8, bo 9 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/wl_primary_light" />
+    <corners android:radius="9dp" />
+</shape>

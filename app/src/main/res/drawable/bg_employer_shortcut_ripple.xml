@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hiệu ứng chạm cho ô lối tắt (không có trong Figma, chỉ để người dùng biết ô bấm được) -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/wl_primary_chip">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="@dimen/wl_radius_card" />
+        </shape>
+    </item>
+</ripple>

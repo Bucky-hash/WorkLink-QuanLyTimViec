@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma: briefcase-business 19x19, nét 1.7. Màu đặt bằng android:tint ở nơi dùng. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="19dp"
+    android:height="19dp"
+    android:viewportWidth="19"
+    android:viewportHeight="19">
+    <path
+        android:pathData="M9.5,9.499L9.508,9.499M12.667,4.749L12.667,3.166C12.667,2.746 12.5,2.343 12.203,2.046C11.906,1.75 11.503,1.583 11.083,1.583L7.917,1.583C7.497,1.583 7.094,1.75 6.797,2.046C6.5,2.343 6.333,2.746 6.333,3.166L6.333,4.749M17.417,10.291C15.068,11.842 12.315,12.669 9.5,12.669C6.685,12.669 3.932,11.842 1.583,10.291M3.166,4.749L15.834,4.749C16.708,4.749 17.417,5.458 17.417,6.333L17.417,14.249C17.417,15.124 16.708,15.833 15.834,15.833L3.166,15.833C2.292,15.833 1.583,15.124 1.583,14.249L1.583,6.333C1.583,5.458 2.292,4.749 3.166,4.749Z"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="1.7"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

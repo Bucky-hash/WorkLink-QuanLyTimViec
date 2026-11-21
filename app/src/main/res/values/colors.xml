@@ -29,4 +29,10 @@
     <!-- Trạng thái -->
     <color name="wl_error">#DC2626</color>
     <color name="wl_shadow">#14000000</color>
+
+    <!-- Nhà tuyển dụng: trang chủ (Figma) -->
+    <color name="wl_employer_text_muted">#748078</color>
+    <color name="wl_employer_border">#E4EAE6</color>
+    <color name="wl_status_new_bg">#F8F4EB</color>
+    <color name="wl_status_new_text">#8B6B32</color>
 </resources>
